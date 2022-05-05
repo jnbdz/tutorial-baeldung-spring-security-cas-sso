@@ -88,6 +88,7 @@ following line to `/etc/sysctl.conf`: `fs.inotify.max_user_instances = 256`.
 You can check the current value via 
 - `cat /proc/sys/fs/inotify/max_user_instances`
 - `sudo sysctl -n fs.inotify.max_user_instances`
+
 Change it: 
 - `vim /etc/sysctl.conf`
 - `sudo sysctl -w fs.inotify.max_user_instances=256`
