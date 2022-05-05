@@ -1,6 +1,25 @@
 # tutorial-baeldung-spring-security-cas-sso
 Tutorial: https://www.baeldung.com/spring-security-cas-sso
 
+## Configuration
+You can move the configurations with this command (by default it gets it from `cas-server/etc/cas/config`): 
+```bash
+./gradlew copyCasConfiguration
+```
+> Note: The specifics of the build are controlled using the `gradle.properties` file.
+
+This is the code that is run (`cas-server/gradle/tasks.gradle`): 
+```groovy
+task copyCasConfiguration(type: Copy, group: "CAS",
+        description: "Copy the CAS configuration from this project to /etc/cas/config") {
+    from "etc/cas/config"
+    into new File('/etc/cas/config').absolutePath
+    doFirst {
+        new File('/etc/cas/config').mkdirs()
+    }
+}
+```
+
 ## Tutorial
 ### Basic setup
 Add the CAS server: 
