@@ -81,6 +81,7 @@ And login with:
 ### CAS Client Setup
 
 ## Troubleshoot
+> Note: You can find some interesting details about CAS settings in the `config-metadata.properties` that you can generate: `./gradlew exportConfigMetadata` (Warning! The file is pretty big).
 ### `cas.authn.pm.json.location:` does not work
 You may need to adjust the total number of {@code inotify} instances. On Linux, you may need to add the
 following line to `/etc/sysctl.conf`: `fs.inotify.max_user_instances = 256`.
