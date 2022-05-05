@@ -80,6 +80,20 @@ And login with:
 - password: Mellon
 ### CAS Client Setup
 
+## Troubleshoot
+### `cas.authn.pm.json.location:` does not work
+You may need to adjust the total number of {@code inotify} instances. On Linux, you may need to add the
+following line to `/etc/sysctl.conf`: `fs.inotify.max_user_instances = 256`.
+
+You can check the current value via 
+- `cat /proc/sys/fs/inotify/max_user_instances`
+- `sudo sysctl -n fs.inotify.max_user_instances`
+Change it: 
+- `vim /etc/sysctl.conf`
+- `sudo sysctl -w fs.inotify.max_user_instances=256`
+
+To reload after you modified in the config file:
+- `sudo sysctl -p`
 
 ## Sources
 - https://www.atlassian.com/git/tutorials/git-submodule
