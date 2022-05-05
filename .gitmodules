@@ -1,0 +1,3 @@
+[submodule "cas-server"]
+	path = cas-server
+	url = git@github.com:apereo/cas-overlay-template.git
