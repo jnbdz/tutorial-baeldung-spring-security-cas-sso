@@ -1,3 +1,6 @@
 [submodule "cas-server"]
 	path = cas-server
 	url = git@github.com:apereo/cas-overlay-template.git
+[submodule "spring-boot-cas-client"]
+	path = spring-boot-cas-client
+	url = git@github.com:jnbdz/spring-boot-cas-client.git
