@@ -4,3 +4,6 @@
 [submodule "spring-boot-cas-client"]
 	path = spring-boot-cas-client
 	url = git@github.com:jnbdz/spring-boot-cas-client.git
+[submodule "quarkus-cas-client"]
+	path = quarkus-cas-client
+	url = git@github.com:jnbdz/quarkus-cas-client.git
