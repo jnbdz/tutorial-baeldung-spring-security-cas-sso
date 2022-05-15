@@ -7,9 +7,27 @@ Cloning repo with submodule:
 ```bash
 git clone --recursive [URL]
 ```
-If you already have the repo but not its submodule (`--recursive` is for all the sub-submodule):
+If you already have the repo but not its submodule (`--recursive` is for all the *sub*-submodule):
 ```bash
 git submodule update --init --recursive
+```
+You can download multiple ones at the same time by adding `--jobs 8` or `-j 8` (8 being the number of repos pulled at the same time) flag to the previous command.
+
+Pulling for repo plus submodule: 
+```bash
+git pull --recursive-submodules
+```
+
+Pulling all changes for the submodules: 
+```bash
+git submodule update --remote
+```
+
+Executing a command on every submodule:
+```bash
+git submodule foreach 'git reset --hard'
+# With nested submodules: 
+git submodule foreach --recursive 'git reset --hard'
 ```
 
 ## Configuration
