@@ -1,6 +1,17 @@
 # tutorial-baeldung-spring-security-cas-sso
 Tutorial: https://www.baeldung.com/spring-security-cas-sso
 
+## Git
+### Git submodule
+Cloning repo with submodule: 
+```bash
+git clone --recursive [URL]
+```
+If you already have the repo but not its submodule (`--recursive` is for all the sub-submodule):
+```bash
+git submodule update --init --recursive
+```
+
 ## Configuration
 You can move the configurations with this command (by default it gets it from `cas-server/etc/cas/config`): 
 ```bash
